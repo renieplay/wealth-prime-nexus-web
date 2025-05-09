@@ -1,14 +1,44 @@
-// Update this page (the content is just a fallback if you fail to update the page)
 
-const Index = () => {
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight, Code, Image, Star, Book } from "lucide-react";
+import Section from "@/components/Section";
+import AnimatedText from "@/components/AnimatedText";
+
+// Home page components
+import HeroSection from "@/components/home/HeroSection";
+import FeaturedServices from "@/components/home/FeaturedServices";
+import AboutCompany from "@/components/home/AboutCompany";
+import ClientsSection from "@/components/home/ClientsSection";
+import LatestProjects from "@/components/home/LatestProjects";
+import TestimonialsSection from "@/components/home/TestimonialsSection";
+import CtaSection from "@/components/home/CtaSection";
+
+const HomePage = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="pt-20">
+      {/* Hero Section */}
+      <HeroSection />
+      
+      {/* About Company Brief */}
+      <AboutCompany />
+      
+      {/* Featured Services */}
+      <FeaturedServices />
+      
+      {/* Clients Section */}
+      <ClientsSection />
+      
+      {/* Latest Projects */}
+      <LatestProjects />
+      
+      {/* Testimonials */}
+      <TestimonialsSection />
+      
+      {/* CTA Section */}
+      <CtaSection />
     </div>
   );
 };
 
-export default Index;
+export default HomePage;
